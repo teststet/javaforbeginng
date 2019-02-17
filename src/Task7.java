@@ -8,9 +8,9 @@ public class Task7 {
 
         Scanner in = new Scanner(System.in);
         System.out.print("Введите число: ");
-        int N = in.nextInt();
+        int T = in.nextInt();
 
-        if(N == x || N == y || N == z) {
+        if(T == x || T == y || T == z) {
             System.out.println("Данное значение имеется в константах");
         }
         else {
