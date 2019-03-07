@@ -8,10 +8,11 @@ import java.util.Scanner;
 public class Task9 {
     public static void main(String args[]) {
         int mas[] = new int[5];
+        Scanner in = new Scanner(System.in);
 
         for (int i = 0; i < 5; i++) {
             System.out.print("Введите число для массива: ");
-            Scanner in = new Scanner(System.in);
+
             mas[i] = in.nextInt();
         }
 
