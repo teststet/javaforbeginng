@@ -22,6 +22,8 @@ public class Task6 {
         int sa = (x+y+z)/3;
         System.out.println("Среднее арифметическое чисел x,y,z = " + sa);
 
+        sa = sa / 2;
+
         if(sa > 3) {
             System.out.println("Программа выполнена корректно");
         }
