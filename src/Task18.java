@@ -7,12 +7,12 @@ import java.io.*;
 
 public class Task18 {
     public static void main (String args[]) {
-        String StrOut;
+        String strOut;
         int num = 0;
         try (BufferedReader br = new BufferedReader(new FileReader("text.txt")))
         {
-            while ((StrOut = br.readLine()) != null) {
-                System.out.println(StrOut);
+            while ((strOut = br.readLine()) != null) {
+                System.out.println(strOut);
                 num++;
             }
         } catch (IOException exc) {
@@ -21,20 +21,23 @@ public class Task18 {
 
         System.out.println("Вы можете ввести " + num + " строк");
 
-        String StrIn;
+        String strIn;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         try (FileWriter fw = new FileWriter("text.txt"))
         {
             for(int  i = 0; i < num; i++){
                 System.out.print(": ");
+
+                //Проверяем полседняя ли строка, если да то не добавляем перевод строки
                 if((i+1) == num) {
-                    StrIn = br.readLine();
-                    fw.write(StrIn);
+                    strIn = br.readLine();
+                    fw.write(strIn);
                     break;
                 }
-                StrIn = br.readLine()+ "\r\n";
-                fw.write(StrIn);
+
+                strIn = br.readLine()+ "\r\n";
+                fw.write(strIn);
             }
         } catch (IOException exc) {
             System.out.println("Ошибка ввода-вывода: " + exc);
