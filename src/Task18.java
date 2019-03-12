@@ -28,14 +28,6 @@ public class Task18 {
         {
             for(int  i = 0; i < num; i++){
                 System.out.print(": ");
-
-                //Проверяем полседняя ли строка, если да то не добавляем перевод строки
-                if((i+1) == num) {
-                    strIn = br.readLine();
-                    fw.write(strIn);
-                    break;
-                }
-
                 strIn = br.readLine()+ "\r\n";
                 fw.write(strIn);
             }
