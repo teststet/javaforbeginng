@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class Task10 {
     public static void main(String args[]) {
         int mas[][] = new int[3][3];
+        Scanner in = new Scanner(System.in);
 
         for(int i = 0; i < 3; i++) {
             for(int j = 0; j < 3; j++) {
                 System.out.print("Введите число для элемента матрицы[" + (i+1) + "]" + "[" + (j+1) + "]: ");
-                Scanner in = new Scanner(System.in);
                 mas[i][j] = in.nextInt();
             }
         }

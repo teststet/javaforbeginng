@@ -14,7 +14,6 @@ public class Task13 {
         String str1 = in.nextLine();
 
         System.out.print("Введите вторую строку: ");
-        in = new Scanner(System.in);
         String str2 = in.nextLine();
 
         System.out.println("Вывод на экран строки с наибольшей длинной");
