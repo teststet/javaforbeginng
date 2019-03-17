@@ -9,7 +9,7 @@ import java.io.*;
 
 public class Task17 {
     public static void main (String args[]) {
-        String StrIn;
+        String strIn;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Признак конца ввода - строка 'stop' ");
 
@@ -17,13 +17,13 @@ public class Task17 {
         {
             do {
                 System.out.print(": ");
-                StrIn = br.readLine();
+                strIn = br.readLine();
 
-                if (StrIn.compareTo("stop") == 0) break;
+                if (strIn.equals("stop")) break;
 
-                StrIn = StrIn + "\r\n";
-                fw.write(StrIn);
-            } while (StrIn.compareTo("stop") != 0);
+                strIn = strIn + "\r\n";
+                fw.write(strIn);
+            } while (true);
         } catch (IOException exc) {
             System.out.println("Ошибка ввода-вывода: " + exc);
         }
